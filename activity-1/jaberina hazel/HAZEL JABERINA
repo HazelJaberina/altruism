@@ -1,0 +1,36 @@
+/**
+ * Name: Hazel Jaberina
+ * Section: Altruism
+ * Year: 4th 
+ *
+ *
+ * */
+
+import java.util.Scanner;
+public class Main {
+       
+  public static void main(String[] args){   
+   Scanner myInput = new Scanner (System.in);     
+    int i,grade=0,add=0,a=1,b=0;
+	   double avg;
+    char choices;
+	 
+    do{
+        System.out.println("Would You Like to Enter Your grades?"); 
+        System.out.println("If Yes Enter Y"); 
+        System.out.println("If No Enter N\n");   
+        System.out.print("Enter Here:");
+        choices = myInput.next().charAt(0);
+        
+        if((choices=='y')||(choices== 'Y')){
+        System.out.println("Please Enter a grade: "); 
+        grade = myInput.nextInt();
+         for (i=0;i<a;i++)
+		           	add +=grade;
+              b +=a;
+        }   	        	
+    }while((choices == 'y')||(choices == 'Y'));
+	       avg=add/b;
+	       System.out.print("\nThe Average is: " +avg);
+}
+}
