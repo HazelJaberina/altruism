@@ -1,0 +1,112 @@
+import java.util.*;
+
+public class Main{
+  public static void main(String[]args){
+  Scanner hazel = new Scanner(System.in);
+  int order, choose, num=1;
+  double total=0;
+  String[] item = new String[]{" "," "," "," "," "," "," "," "," "};
+
+
+  System.out.print("Orderlist Menu              ");
+  System.out.print("\nFood:                         Price   ");
+  System.out.println("\n  11.Buffalo Wings             150.oo  ");
+  System.out.println("\n  12.Fried Chicken             130.oo  ");
+  System.out.println("\n  13.Beaf Steak                250.oo  ");
+  System.out.print("\nSnacks:                       Price   ");
+  System.out.println("\n  14.Ham Burger                60.oo   ");
+  System.out.println("\n  15.Chicken Burger            55.oo   ");
+  System.out.println("\n  16.Spaghetti                 75.oo   ");
+  System.out.print("\nBeverages:                    Price   ");
+  System.out.println("\n  17.Kulafu                    55.oo   ");
+  System.out.println("\n  18.Tanduay                   45.oo   ");
+  System.out.println("\n  19.Primera Light             160.oo  ");
+
+ do{
+  System.out.println("Would You Like to Order?");
+  System.out.println("Enter Y-Yes and N-No: ");
+  choose = hazel.next().charAt(0);
+  
+     if((choose == 'y') || (choose == 'Y')){
+        System.out.print("Enter Order: ");    
+        order = hazel.nextInt();
+          switch(order){
+              case 11:
+                     System.out.print("Buffalo Wings");    
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*150.00);
+                     item[0] =("\nBuffalo Wing    150.00"); 
+                     break;
+              case 12:
+                     System.out.print("Fried Chicken");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*130.00);
+                     item[1] =("\nFried Chicken    130.00");
+                     break;    
+              case 13:
+                     System.out.print("Beaf Steak");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*250.00);
+                     item[2] =("\nBeaf Steak    250.00");
+                     break;    
+              case 14:
+                     System.out.print("Ham Burger");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*60.00);
+                     item[3] =("\nHam Burger    60.00");
+                     break;    
+              case 15:
+                     System.out.print("Chicken Burger");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*55.00);
+                     item[4] =("\nChicken Burger    55.00");
+                     break;    
+              case 16:
+                     System.out.print("Spaghetti");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*75.00);
+                     item[5] =("\nSpaghetti    75.00");
+                     break;    
+              case 17:
+                     System.out.print("Kulafu");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*55.00);
+                     item[6] =("\nKulafu    55.00");
+                     break;    
+              case 18:
+                     System.out.print("Tanduay");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*45.00);
+                     item[7] =("\nTanduay    45.00");
+                     break;    
+              case 19:
+                     System.out.print("Primera Light");
+                     System.out.print("\nOrder Quntity: "); 
+                     num = hazel.nextInt();
+                     total = total + (num*160.00);
+                     item[8] =("\nPrimera Light    160.00");
+                     break;     
+           } 
+            System.out.print("Do You Want To Add Y-yes and N-No");
+        }
+    }while((choose == 'y') || (choose == 'Y'));
+           System.out.print(item[0]);
+           System.out.print("\t"+item[1]);
+           System.out.print("\t"+item[2]);
+           System.out.print("\t"+item[3]);
+           System.out.print("\t"+item[4]);
+           System.out.print("\t"+item[5]);
+           System.out.print("\t"+item[6]);
+           System.out.print("\t"+item[7]);
+           System.out.print("\t"+item[8]);
+           System.out.print("\nThe Bill is:   "+total);            
+  }  
+}
